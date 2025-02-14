@@ -18,6 +18,14 @@ const nextConfig = {
   // typescript: {
   //   ignoreBuildErrors: true,
   // }
+  experimental: {
+    swcPlugins: [
+      ['@next/swc-wasm-nodejs', {}]
+    ]
+  },
+  compiler: {
+    swc: false
+  }
 };
 
 export default nextConfig;
