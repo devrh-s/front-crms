@@ -1,0 +1,232 @@
+
+@baseUrl = https://new2.crm-s.com/api/v1
+
+# Login
+# @name tokenAPI
+
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email": "johndoe@example.com",
+    "password": "secret",
+    "remember_me": false
+}
+
+###
+
+@authToken = {{tokenAPI.response.body.token}}
+
+###
+
+#Get Responsibilities
+# @name get#Get Responsibilities
+
+GET {{baseUrl}}/responsibilities
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Permissions
+# @name getChecklistItems
+GET {{baseUrl}}/checklist-items
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Permissions
+# @name getPermissions
+GET {{baseUrl}}/role-permissions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Profile
+# @name getProfile
+GET {{baseUrl}}/profile
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Job-Posts
+# @name getJobPosts
+
+GET {{baseUrl}}/job-posts
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Notifications
+# @name getNotifications
+
+GET {{baseUrl}}/notifications
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###F
+
+#Get Job-Sites
+# @name getJobSites
+
+GET {{baseUrl}}/job-sites
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Job-Site
+# @name getJobSite
+
+GET {{baseUrl}}/job-sites/2
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Job-Site
+# @name getJobAccounts
+
+GET {{baseUrl}}/job-accounts
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Tool Types
+# @name getToolTypes
+
+GET {{baseUrl}}/tool-types
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Communication Types
+# @name getToolTypes
+
+GET {{baseUrl}}/communication-types
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Communication Types
+# @name getCommunicationTypes
+
+GET {{baseUrl}}/countries
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Job Reequest Template
+# @name getJobReequestTemplate
+
+GET {{baseUrl}}/job-requests/1/templates
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get JobTemplates
+# @name JobTemplates
+
+GET {{baseUrl}}/job-templates
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Profile
+# @name getProfile
+
+GET {{baseUrl}}/profile
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Users
+# @name getUsers
+
+GET {{baseUrl}}/users
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Unconfirmed Users
+# @name getUnconfirmedUsers
+
+GET {{baseUrl}}/not-confirmed-users
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Fields
+# @name getFields
+
+GET {{baseUrl}}/entities/2/blocks/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Job Applications
+# @name getJobApplications
+
+GET {{baseUrl}}/job-applications
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Entity Block Fields
+# @name getEntityBlockFields
+
+GET {{baseUrl}}/entity-blocks-fields
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Countries
+# @name getCountries
+
+GET {{baseUrl}}/countries
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Accounts
+# @name getAccounts
+
+GET {{baseUrl}}/accounts
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Contacts
+# @name getContacts
+
+GET {{baseUrl}}/contacts
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+#Get Flags
+# @name getFlags
+
+GET {{baseUrl}}/flags
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+

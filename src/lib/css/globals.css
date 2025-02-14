@@ -1,0 +1,149 @@
+/* Nulling */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: 0;
+  outline-offset: 0;
+}
+
+a:focus,
+a:active {
+  outline: 0;
+  outline-offset: 0;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* TECH */
+
+.active {
+  color: #2e7d32;
+}
+
+.inactive {
+  color: #d32f2f;
+}
+
+.flex-box-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom scroll */
+.customScroll {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.customScroll::-webkit-scrollbar {
+  width: 5px;
+  /* height: 120px; */
+  height: 10px;
+  background: white;
+  border-radius: 5px;
+}
+
+.customScroll::-webkit-scrollbar-thumb {
+  height: 70px;
+  background: #808080;
+  border-radius: 5px;
+}
+
+/* Menu Scroll */
+@property --scrollBG {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
+.customMenuScroll {
+  transition: --scrollBG 0.2s ease-in;
+}
+
+.customMenuScroll:hover {
+  --scrollBG: #a6b4be36;
+}
+
+.customMenuScroll::-webkit-scrollbar {
+  background: #081e2f;
+}
+
+.customMenuScroll::-webkit-scrollbar-thumb {
+  background: var(--scrollBG);
+}
+
+/* Common */
+.MuiDataGrid-actionsCell .MuiButtonBase-root {
+  color: #1565c0;
+}
+
+.actionCell .MuiDataGrid-actionsCell {
+  width: 100%;
+}
+
+.ant-modal-wrap {
+  z-index: 10000 !important;
+}
+
+.ant-upload-list {
+  display: none;
+}

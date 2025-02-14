@@ -1,0 +1,12 @@
+.husky
+.next
+.eslintrc.json
+public
+coverage
+bitbucket-pipelines.yml
+next.config.mjs
+package-lock.json
+package.json
+postinstall.js
+README.md
+tsconfig.json
